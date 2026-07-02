@@ -1,0 +1,42 @@
+{
+  "expo": {
+    "name": "Money",
+    "slug": "money-app",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "scheme": "moneyapp",
+    "splash": {
+      "backgroundColor": "#0F172A",
+      "resizeMode": "contain"
+    },
+    "ios": {
+      "supportsTablet": false,
+      "infoPlist": {
+        "NSCameraUsageDescription": "ใช้กล้องเพื่อถ่ายรูปสลิป/ใบเสร็จ",
+        "NSPhotoLibraryUsageDescription": "เลือกรูปสลิป/ใบเสร็จจากคลังภาพ"
+      }
+    },
+    "android": {
+      "package": "com.moneyapp.local",
+      "permissions": ["CAMERA", "READ_MEDIA_IMAGES", "POST_NOTIFICATIONS"]
+    },
+    "plugins": [
+      "expo-sqlite",
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "เลือกรูปสลิป/ใบเสร็จจากคลังภาพ",
+          "cameraPermission": "ใช้กล้องเพื่อถ่ายรูปสลิป/ใบเสร็จ"
+        }
+      ],
+      [
+        "expo-notifications",
+        {
+          "color": "#10B981"
+        }
+      ]
+    ]
+  }
+}
